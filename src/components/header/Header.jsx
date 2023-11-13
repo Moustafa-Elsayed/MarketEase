@@ -33,7 +33,7 @@ const Header = () => {
                         <Typography
                             variant="p"
                             className='logo'
-                            sx={{ color: "orange" }}
+                            sx={{ color: "orange",cursor:"pointer" }}
                             onClick={() => {
                             }}
                         >
