@@ -25,7 +25,7 @@ const Header = () => {
             <div className="appbar">
                 <AppBar
                     className='nav-bar'
-                    position="sticky"
+                    position="fixed"
                     sx={{ backgroundColor: "black" }}
                     elevation={2}
                 >
