@@ -39,18 +39,20 @@ const Header = () => {
         <Fragment>
             <div className="appbar">
                 <AppBar
+                className='nav-bar'
                     position="sticky"
-                    sx={{ backgroundColor: "white" }}
+                    sx={{ backgroundColor: "black" }}
                     elevation={2}
                 >
-                    <Toolbar sx={{ justifyContent: "space-between" }}>
+                    <Toolbar className='nav-bar' sx={{ justifyContent: "space-between" }}>
                         <Typography
                             variant="p"
-                            className="logo"
+                            className='logo'
+                            sx={{ color:"orange" }}
                             onClick={() => {
                             }}
                         >
-                            Eflyer
+                            MarketEase
                         </Typography>
                         <Box sx={{ display: { xs: "none", md: "block" } }}>
                             <Box sx={{ display: "flex", marginRight: "60px" }}>
@@ -69,7 +71,7 @@ const Header = () => {
                                         primary="Home"
                                         className="home"
                                         sx={{
-                                            color: "#343a40",
+                                            color: "orange",
 
                                             marginRight: "30px",
                                             marginLeft: "30px",
@@ -94,7 +96,7 @@ const Header = () => {
                                     <ListItemText
                                         primary="Product"
                                         sx={{
-                                            color: "#343a40",
+                                            color: "orange",
                                             marginRight: "30px",
                                             marginLeft: "30px",
                                             textAlign: "center",
@@ -111,7 +113,7 @@ const Header = () => {
                                 <Button
                                     sx={{
                                         backgroundColor: "transparent",
-                                        color: "#343a40",
+                                        color: "orange",
                                         marginLeft: "10px",
                                         "&:hover": {
                                             color: "#f26522",
