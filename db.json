@@ -5,7 +5,8 @@
       "category": "iPhone",
       "title": "iPhone 13",
       "price": 899.99,
-      "description": "Latest iPhone model featuring a powerful A15 Bionic chip and improved camera capabilities."
+      "description": "Latest iPhone model featuring a powerful A15 Bionic chip and improved camera capabilities.",
+      "image":"no"
     },
     {
       "id": 2,
