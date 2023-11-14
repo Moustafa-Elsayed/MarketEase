@@ -6,7 +6,7 @@ export const fetchProduct = createAsyncThunk("productSlice/fetchProduct",
   async (_, thunkAPI) => {
     const { rejectWithValue } = thunkAPI;
     try {
-      const response = await axios.get("http://localhst:3005/mobiles");
+      const response = await axios.get("http://localhost:3005/mobiles");
       return response.data;
     } catch (error) {
       // Handle any errors here

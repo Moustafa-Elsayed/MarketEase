@@ -10,19 +10,22 @@ import { useEffect } from "react";
 import "./product.css"
 const Product = () => {
   const product = useSelector((state) => state.product.data)
+  const isloading = useSelector((state) => state.product.isloading)
+  console.log(isloading);
+
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchProduct())
   }, [dispatch])
   return (
-    <Grid container spacing={5}>
+    <>{isloading ? <h1>looooding....</h1> : <Grid container spacing={5}>
       {product.map((product) => (
         <Grid key={product.id} xs={12} sm={6} md={4} lg={3} item>
           <Card
             elevation={2}
-            
+
             sx={{
-              backgroundColor:"#21201d",
+              backgroundColor: "#21201d",
               maxWidth: "100%",
               borderRadius: "9px",
               height: "100%",
@@ -80,7 +83,9 @@ const Product = () => {
           </Card>
         </Grid>
       ))}
-    </Grid>
+    </Grid>}
+    </>
+
   )
 }
 
