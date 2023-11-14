@@ -1,25 +1,33 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { toast } from "react-toastify"
+
 export const cartSlice = createSlice({
     name: 'product',
     initialState: [],
 
     reducers: {
+
         addToCart: (state, action) => {
             const findProduct = state.find(
                 (product) => product.id === action.payload.id
             );
             if (findProduct) {
                 findProduct.quantity += 1;
-                toast.success('Custom Success Notification', {
-                    position: 'bottom-left', // Set the position of the notification
+                toast.success(`${action.payload.name} add to cart`,
+                    {
+                        style: {
+                          
+                        },
+                        position: 'bottom-left', // Set the position of the notification
 
-                });
+                    });
             } else {
                 const productClone = { ...action.payload, quantity: 1 };
                 state.push(productClone);
-                toast.success('success add product to cart', {
+                toast.success(`${action.payload.title} add to cart`, {
+                    
                     position: 'bottom-left', // Set the position of the notification
+
                 });
             }
             localStorage.setItem("cart", JSON.stringify(state));
