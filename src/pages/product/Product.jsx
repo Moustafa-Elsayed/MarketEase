@@ -8,13 +8,13 @@ import Typography from "@mui/material/Typography";
 import { Grid, Button } from "@mui/material";
 import { useEffect } from "react";
 import { addToCart } from "../../redux/cartSlice";
-
 import "./product.css"
+import { useNavigate } from 'react-router-dom';
 const Product = () => {
   const product = useSelector((state) => state.product.data)
   const isloading = useSelector((state) => state.product.isloading)
-
-
+// eslint-disable-next-line no-unused-vars
+const Navigate=useNavigate()
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchProduct())
