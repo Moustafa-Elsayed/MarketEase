@@ -7,11 +7,13 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { Grid, Button } from "@mui/material";
 import { useEffect } from "react";
+import { addToCart } from "../../redux/cartSlice";
+
 import "./product.css"
 const Product = () => {
   const product = useSelector((state) => state.product.data)
   const isloading = useSelector((state) => state.product.isloading)
-  console.log(isloading);
+
 
   const dispatch = useDispatch();
   useEffect(() => {
@@ -76,6 +78,9 @@ const Product = () => {
               <Button
                 variant="outlined"
                 className='btn-add'
+                onClick={() => {
+                  dispatch(addToCart(product));
+                }}
               >
                 ADD TO CART
               </Button>

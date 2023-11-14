@@ -17,20 +17,24 @@ import Badge from "@mui/material/Badge";
 import "./header.css";
 import Sidebar from '../sidebar/Sidebar';
 import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
+    const navigate=useNavigate();
     const [open, setOpen] = useState("none");
     const [ope, setOpe] = useState(false);
     const [close, setClose] = useState("permanent");
-    const { error } = useSelector((state) => state.product)
+    const error = useSelector((state) => state.product.error)
+    const cart = useSelector((state) => state.cart)
+
     return (
         <Fragment>
             <div className="appbar">
-            {error && <Alert severity="error">This is an error alert — check it out!</Alert>}
+                {error && <Alert severity="error">{error}</Alert>}
 
                 <AppBar
                     className='nav-bar'
-                    position="fixed"
+                    position="sticky"
                     sx={{ backgroundColor: "black" }}
                     elevation={2}
                 >
@@ -48,6 +52,7 @@ const Header = () => {
                             <Box sx={{ display: "flex", marginRight: "60px" }}>
                                 <ListItemButton
                                     onClick={() => {
+                                        navigate("/")
                                     }}
                                     sx={{
                                         "&:hover": {
@@ -111,10 +116,11 @@ const Header = () => {
                                         },
                                     }}
                                     onClick={() => {
+                                        navigate("/cart")
                                     }}
                                     disableElevation
                                     startIcon={
-                                        <Badge color="primary" badgeContent="0" showZero>
+                                        <Badge color="primary" badgeContent={cart.length} showZero>
                                             <ShoppingCartIcon />
                                         </Badge>
                                     }

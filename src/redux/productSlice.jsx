@@ -9,7 +9,6 @@ export const fetchProduct = createAsyncThunk("productSlice/fetchProduct",
       const response = await axios.get("http://localhost:3005/mobiles");
       return response.data;
     } catch (error) {
-      // Handle any errors here
       return rejectWithValue(error.message);
     }
   })
