@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-
+import { toast } from "react-toastify"
 export const cartSlice = createSlice({
     name: 'product',
     initialState: [],
@@ -11,9 +11,16 @@ export const cartSlice = createSlice({
             );
             if (findProduct) {
                 findProduct.quantity += 1;
+                toast.success('Custom Success Notification', {
+                    position: 'bottom-left', // Set the position of the notification
+
+                });
             } else {
                 const productClone = { ...action.payload, quantity: 1 };
                 state.push(productClone);
+                toast.success('success add product to cart', {
+                    position: 'bottom-left', // Set the position of the notification
+                });
             }
             localStorage.setItem("cart", JSON.stringify(state));
         },
