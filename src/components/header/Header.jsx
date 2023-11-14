@@ -9,23 +9,28 @@ import {
     AppBar,
     Toolbar,
     Typography,
+    Alert,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import Badge from "@mui/material/Badge";
 import "./header.css";
 import Sidebar from '../sidebar/Sidebar';
+import { useSelector } from 'react-redux';
 
 const Header = () => {
     const [open, setOpen] = useState("none");
     const [ope, setOpe] = useState(false);
     const [close, setClose] = useState("permanent");
+    const { error } = useSelector((state) => state.product)
     return (
         <Fragment>
             <div className="appbar">
+            {error && <Alert severity="error">This is an error alert — check it out!</Alert>}
+
                 <AppBar
                     className='nav-bar'
-                    position="fixed"
+                    position="sticky"
                     sx={{ backgroundColor: "black" }}
                     elevation={2}
                 >
@@ -33,7 +38,7 @@ const Header = () => {
                         <Typography
                             variant="p"
                             className='logo'
-                            sx={{ color: "orange",cursor:"pointer" }}
+                            sx={{ color: "orange", cursor: "pointer" }}
                             onClick={() => {
                             }}
                         >

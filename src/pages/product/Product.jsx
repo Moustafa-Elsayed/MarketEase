@@ -5,7 +5,7 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-import { Grid } from "@mui/material";
+import { Grid, Button } from "@mui/material";
 import { useEffect } from "react";
 import "./product.css"
 const Product = () => {
@@ -20,8 +20,9 @@ const Product = () => {
         <Grid key={product.id} xs={12} sm={6} md={4} lg={3} item>
           <Card
             elevation={2}
-            className="card-style"
+            
             sx={{
+              backgroundColor:"#21201d",
               maxWidth: "100%",
               borderRadius: "9px",
               height: "100%",
@@ -69,7 +70,12 @@ const Product = () => {
               sx={{ paddingTop: "10px" }}
             />
             <CardContent>
-
+              <Button
+                variant="outlined"
+                className='btn-add'
+              >
+                ADD TO CART
+              </Button>
             </CardContent>
           </Card>
         </Grid>
