@@ -8,7 +8,9 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import Container from '@mui/material/Container'
-import { Card } from '@mui/material';
+import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
+import Swal from 'sweetalert2';
+
 const Cart = () => {
     const cart = useSelector((state) => state.cart)
 
@@ -26,29 +28,48 @@ const Cart = () => {
                                 <TableCell align="left">PRICE</TableCell>
                                 <TableCell align="left">QUINTATITY</TableCell>
                                 <TableCell align="left">TOTAL</TableCell>
+                                <TableCell align="left">ACTIONS</TableCell>
                             </TableRow>
                         </TableHead>
                         <TableBody>
-              {cart.map((cartitems) => (
-                <TableRow
-                  sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-                  key={cartitems.id}
-                >
-                  <TableCell align="left">{cartitems.id}</TableCell>
+                            {cart.map((cartitems) => (
+                                <TableRow
+                                    sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+                                    key={cartitems.id}
+                                >
+                                    <TableCell align="left">{cartitems.id}</TableCell>
 
-                  <TableCell align="left">{cartitems.title}</TableCell>
-                  <TableCell align="left">{cartitems.price}</TableCell>
-                  <TableCell align="left">{cartitems.quantity}</TableCell>
-                </TableRow>
-              ))}
-            </TableBody>
-                          \
+                                    <TableCell align="left">{cartitems.title}</TableCell>
+                                    <TableCell align="left">{cartitems.price}</TableCell>
+                                    <TableCell align="left">{cartitems.quantity}</TableCell>
+                                    <TableCell align="left" sx={{ cursor: "pointer" }} onClick={() => {
+                                        Swal.fire({
+                                            title: "Are you sure?",
+                                            text: `${cartitems.title}`,
+                                            icon: "warning",
+                                            showCancelButton: true,
+                                            confirmButtonColor: "#3085d6",
+                                            cancelButtonColor: "#d33",
+                                            confirmButtonText: "Yes, delete it!"
+                                        }).then((result) => {
+                                            if (result.isConfirmed) {
+                                                Swal.fire({
+                                                    title: "Deleted!",
+                                                    text: "Your file has been deleted.",
+                                                    icon: "success"
+                                                });
+                                            }
+                                        });
+                                    }}>
+                                        <DeleteForeverIcon />
+                                    </TableCell>
+
+                                </TableRow>
+                            ))}
+                        </TableBody>
+
                     </Table>
                 </TableContainer>
-
-
-
-
             </Container >
         </>
     )

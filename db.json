@@ -6,14 +6,15 @@
       "title": "iPhone 13",
       "price": 899.99,
       "description": "Latest iPhone model featuring a powerful A15 Bionic chip and improved camera capabilities.",
-      "image":"no"
+      "image":"./image/iphone 13.png"
     },
     {
       "id": 2,
       "category": "iPhone",
       "title": "iPhone 12 Pro",
       "price": 1099.99,
-      "description": "Pro-level iPhone with advanced camera system, LiDAR scanner, and 5G capabilities."
+      "description": "Pro-level iPhone with advanced camera system, LiDAR scanner, and 5G capabilities.",
+      "image":"./image/iphone 12 promax.png"
     },
     {
       "id": 3,
