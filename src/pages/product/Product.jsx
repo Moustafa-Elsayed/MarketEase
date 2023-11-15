@@ -13,8 +13,7 @@ import { useNavigate } from 'react-router-dom';
 const Product = () => {
   const product = useSelector((state) => state.product.data)
   const isloading = useSelector((state) => state.product.isloading)
-// eslint-disable-next-line no-unused-vars
-const Navigate=useNavigate()
+const history=useNavigate()
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchProduct())
@@ -80,6 +79,7 @@ const Navigate=useNavigate()
                 className='btn-add'
                 onClick={() => {
                   dispatch(addToCart(product));
+                  history("/cart")
                 }}
               >
                 ADD TO CART
