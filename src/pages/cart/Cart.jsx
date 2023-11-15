@@ -50,18 +50,25 @@ const Cart = () => {
                                             showCancelButton: true,
                                             confirmButtonColor: "#3085d6",
                                             cancelButtonColor: "#d33",
-                                            confirmButtonText: "Yes, delete it!"
+                                            confirmButtonText: "Yes, delete it!",
+                                            preConfirm: () => {
+                                                // Add your onclick event logic here
+                                                // For example, you can call a function to handle the deletion
+                                                // of the item from the cart.
+                                                console.log("delete");
+                                              },
+                                            
                                         }).then((result) => {
                                             if (result.isConfirmed) {
                                                 Swal.fire({
                                                     title: "Deleted!",
-                                                    text: "Your file has been deleted.",
+                                                    text: `${cartitems.title} has been deleted.`,
                                                     icon: "success"
                                                 });
                                             }
                                         });
                                     }}>
-                                        <DeleteForeverIcon />
+                                        <DeleteForeverIcon sx={{color:"red"}}/>
                                     </TableCell>
 
                                 </TableRow>
