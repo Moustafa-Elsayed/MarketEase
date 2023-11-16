@@ -6,7 +6,7 @@
       "title": "iPhone 13",
       "price": 899.99,
       "description": "Latest iPhone model featuring a powerful A15 Bionic chip and improved camera capabilities.",
-      "image":"./image/iphone 13.png"
+      "image":"https://o.remove.bg/downloads/9ef13e87-1263-4ca9-8c7c-a5d458092169/i_phone_12_promax-removebg-preview.png"
     },
     {
       "id": 2,
@@ -14,133 +14,151 @@
       "title": "iPhone 12 Pro",
       "price": 1099.99,
       "description": "Pro-level iPhone with advanced camera system, LiDAR scanner, and 5G capabilities.",
-      "image":"./image/iphone 12 promax.png"
+      "image":"https://o.remove.bg/downloads/9ef13e87-1263-4ca9-8c7c-a5d458092169/i_phone_12_promax-removebg-preview.png"
     },
     {
       "id": 3,
       "category": "iPhone",
       "title": "iPhone SE",
       "price": 399.99,
-      "description": "Compact iPhone with the powerful A13 Bionic chip and a budget-friendly price."
+      "description": "Compact iPhone with the powerful A13 Bionic chip and a budget-friendly price.",
+      "image":"https://o.remove.bg/downloads/9ef13e87-1263-4ca9-8c7c-a5d458092169/i_phone_12_promax-removebg-preview.png"
     },
     {
       "id": 4,
       "category": "Samsung",
       "title": "Samsung Galaxy S21",
       "price": 799.99,
-      "description": "Powerful flagship smartphone with a stunning display and advanced camera system."
+      "description": "Powerful flagship smartphone with a stunning display and advanced camera system.",
+      "image":"https://o.remove.bg/downloads/976d38ef-e90e-4fa8-b19f-2cf295267732/download__2_-removebg-preview.png"
     },
     {
       "id": 5,
       "category": "Samsung",
       "title": "Samsung Galaxy S20 Ultra",
       "price": 1199.99,
-      "description": "Ultra-high-resolution camera and a massive display make this Samsung flagship stand out."
+      "description": "Ultra-high-resolution camera and a massive display make this Samsung flagship stand out.",      "image":"https://o.remove.bg/downloads/9ef13e87-1263-4ca9-8c7c-a5d458092169/i_phone_12_promax-removebg-preview.png"
+
     },
     {
       "id": 6,
       "category": "Samsung",
       "title": "Samsung Galaxy Note 20",
       "price": 999.99,
-      "description": "Feature-packed Note series phone with S Pen functionality and a large AMOLED display."
+      "description": "Feature-packed Note series phone with S Pen functionality and a large AMOLED display.",      "image":"https://o.remove.bg/downloads/9ef13e87-1263-4ca9-8c7c-a5d458092169/i_phone_12_promax-removebg-preview.png"
+
     },
     {
       "id": 7,
       "category": "iPhone",
       "title": "iPhone 11",
       "price": 699.99,
-      "description": "Previous-gen iPhone with a powerful A13 Bionic chip and impressive dual-camera system."
+      "description": "Previous-gen iPhone with a powerful A13 Bionic chip and impressive dual-camera system.",      "image":"https://o.remove.bg/downloads/9ef13e87-1263-4ca9-8c7c-a5d458092169/i_phone_12_promax-removebg-preview.png"
+
     },
     {
       "id": 8,
       "category": "Samsung",
       "title": "Samsung Galaxy S10+",
       "price": 899.99,
-      "description": "Premium Samsung flagship featuring a versatile triple-camera setup and edge-to-edge display."
+      "description": "Premium Samsung flagship featuring a versatile triple-camera setup and edge-to-edge display.",      "image":"https://o.remove.bg/downloads/9ef13e87-1263-4ca9-8c7c-a5d458092169/i_phone_12_promax-removebg-preview.png"
+
     },
     {
       "id": 9,
       "category": "iPhone",
       "title": "iPhone XR",
       "price": 599.99,
-      "description": "Colorful iPhone with a Liquid Retina display and advanced Face ID technology."
+      "description": "Colorful iPhone with a Liquid Retina display and advanced Face ID technology.",      "image":"https://o.remove.bg/downloads/9ef13e87-1263-4ca9-8c7c-a5d458092169/i_phone_12_promax-removebg-preview.png"
+
     },
     {
       "id": 10,
       "category": "Samsung",
       "title": "Samsung Galaxy Note 10+",
       "price": 1099.99,
-      "description": "Large-screen Note series phone with an S Pen and advanced camera features."
+      "description": "Large-screen Note series phone with an S Pen and advanced camera features.",      "image":"https://o.remove.bg/downloads/9ef13e87-1263-4ca9-8c7c-a5d458092169/i_phone_12_promax-removebg-preview.png"
+
     },
     {
       "id": 11,
       "category": "iPhone",
       "title": "iPhone 12 Mini",
       "price": 699.99,
-      "description": "Compact yet powerful iPhone with the A14 Bionic chip and dual-camera system."
+      "description": "Compact yet powerful iPhone with the A14 Bionic chip and dual-camera system.",      "image":"https://o.remove.bg/downloads/9ef13e87-1263-4ca9-8c7c-a5d458092169/i_phone_12_promax-removebg-preview.png"
+
     },
     {
       "id": 12,
       "category": "Samsung",
       "title": "Samsung Galaxy S9",
       "price": 499.99,
-      "description": "Previous-gen Samsung flagship with a Super AMOLED display and a single-lens camera."
+      "description": "Previous-gen Samsung flagship with a Super AMOLED display and a single-lens camera.",      "image":"https://o.remove.bg/downloads/9ef13e87-1263-4ca9-8c7c-a5d458092169/i_phone_12_promax-removebg-preview.png"
+
     },
     {
       "id": 13,
       "category": "iPhone",
       "title": "iPhone X",
       "price": 799.99,
-      "description": "Revolutionary iPhone with a bezel-less OLED display and Face ID technology."
+      "description": "Revolutionary iPhone with a bezel-less OLED display and Face ID technology.",      "image":"https://o.remove.bg/downloads/9ef13e87-1263-4ca9-8c7c-a5d458092169/i_phone_12_promax-removebg-preview.png"
+
     },
     {
       "id": 14,
       "category": "Samsung",
       "title": "Samsung Galaxy S8",
       "price": 599.99,
-      "description": "Slim and stylish Samsung flagship with an Infinity Display and advanced camera capabilities."
+      "description": "Slim and stylish Samsung flagship with an Infinity Display and advanced camera capabilities.",      "image":"https://o.remove.bg/downloads/9ef13e87-1263-4ca9-8c7c-a5d458092169/i_phone_12_promax-removebg-preview.png"
+
     },
     {
       "id": 15,
       "category": "iPhone",
       "title": "iPhone 8 Plus",
       "price": 699.99,
-      "description": "Large-screen iPhone with dual-camera setup, featuring Portrait mode and 2x optical zoom."
+      "description": "Large-screen iPhone with dual-camera setup, featuring Portrait mode and 2x optical zoom.",      "image":"https://o.remove.bg/downloads/9ef13e87-1263-4ca9-8c7c-a5d458092169/i_phone_12_promax-removebg-preview.png"
+
     },
     {
       "id": 16,
       "category": "Samsung",
       "title": "Samsung Galaxy Note 9",
       "price": 899.99,
-      "description": "Powerful Note series phone with an S Pen and a large, high-resolution display."
+      "description": "Powerful Note series phone with an S Pen and a large, high-resolution display.",      "image":"https://o.remove.bg/downloads/9ef13e87-1263-4ca9-8c7c-a5d458092169/i_phone_12_promax-removebg-preview.png"
+
     },
     {
       "id": 17,
       "category": "iPhone",
       "title": "iPhone 7",
       "price": 499.99,
-      "description": "Water-resistant iPhone with a powerful A10 Fusion chip and advanced camera features."
+      "description": "Water-resistant iPhone with a powerful A10 Fusion chip and advanced camera features.",      "image":"https://o.remove.bg/downloads/9ef13e87-1263-4ca9-8c7c-a5d458092169/i_phone_12_promax-removebg-preview.png"
+
     },
     {
       "id": 18,
       "category": "Samsung",
       "title": "Samsung Galaxy S7 Edge",
       "price": 599.99,
-      "description": "Curved-edge display and advanced camera technology make this Samsung phone stand out."
+      "description": "Curved-edge display and advanced camera technology make this Samsung phone stand out.",      "image":"https://o.remove.bg/downloads/9ef13e87-1263-4ca9-8c7c-a5d458092169/i_phone_12_promax-removebg-preview.png"
+
     },
     {
       "id": 19,
       "category": "iPhone",
       "title": "iPhone 6S",
       "price": 399.99,
-      "description": "Apple's iPhone with 3D Touch technology and a 12MP iSight camera."
+      "description": "Apple's iPhone with 3D Touch technology and a 12MP iSight camera.",      "image":"https://o.remove.bg/downloads/9ef13e87-1263-4ca9-8c7c-a5d458092169/i_phone_12_promax-removebg-preview.png"
+
     },
     {
       "id": 20,
       "category": "Samsung",
       "title": "Samsung Galaxy S6",
       "price": 499.99,
-      "description": "Slim and stylish Samsung flagship with a high-resolution display and a powerful camera."
+      "description": "Slim and stylish Samsung flagship with a high-resolution display and a powerful camera.",      "image":"https://o.remove.bg/downloads/9ef13e87-1263-4ca9-8c7c-a5d458092169/i_phone_12_promax-removebg-preview.png"
+
     }
   ]
 }
