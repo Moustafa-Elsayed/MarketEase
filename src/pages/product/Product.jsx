@@ -33,11 +33,11 @@ const Product = () => {
                   maxWidth: "100%",
                   borderRadius: "9px",
                   height: "100%",
-                  padding: "10px",
+                  padding: "3px",
                 }}
                 onClick={() => {}}
               >
-                <Typography
+                {/* <Typography
                   gutterBottom
                   variant="h5"
                   component="div"
@@ -48,7 +48,7 @@ const Product = () => {
                   }}
                 >
                   {product.category}
-                </Typography>
+                </Typography> */}
                 <Typography
                   gutterBottom
                   variant="h5"
