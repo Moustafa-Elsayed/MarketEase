@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchProduct } from "../../redux/productSlice";
 import Card from "@mui/material/Card";
@@ -10,7 +10,10 @@ import { useEffect } from "react";
 import { addToCart } from "../../redux/cartSlice";
 import "./product.css";
 import { useNavigate } from "react-router-dom";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 const Product = () => {
+  const [showMore, setShowmore] = useState(false);
   const product = useSelector((state) => state.product.data);
   const isloading = useSelector((state) => state.product.isloading);
   const history = useNavigate();
@@ -24,7 +27,7 @@ const Product = () => {
         <h1>looooding....</h1>
       ) : (
         <Grid container spacing={5}>
-          {product.map((product) => (
+          {product.slice(0, showMore ? product.length : 4).map((product) => (
             <Grid key={product.id} xs={12} sm={6} md={4} lg={3} item>
               <Card
                 elevation={2}
@@ -77,6 +80,7 @@ const Product = () => {
                 />
                 <CardContent>
                   <Button
+                    startIcon={<ExpandMoreIcon />}
                     variant="outlined"
                     className="btn-add"
                     onClick={() => {
@@ -90,6 +94,19 @@ const Product = () => {
               </Card>
             </Grid>
           ))}
+          {product.length > 4 && (
+            <Grid item xs={12}>
+              <Button
+                sx={{}}
+                variant="outlined"
+                onClick={() => {
+                  setShowmore((prev) => !prev);
+                }}
+              >
+                {showMore ? "SEE LESS ⇪" : "SEE MORE ⇩"}
+              </Button>
+            </Grid>
+          )}
         </Grid>
       )}
     </>

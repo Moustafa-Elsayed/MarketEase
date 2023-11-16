@@ -10,7 +10,7 @@ import Paper from "@mui/material/Paper";
 import Container from "@mui/material/Container";
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 import Swal from "sweetalert2";
-import { decreaseCart, deleteFromCart } from "../../redux/cartSlice";
+import { deleteFromCart } from "../../redux/cartSlice";
 
 const Cart = () => {
   const cart = useSelector((state) => state.cart);
