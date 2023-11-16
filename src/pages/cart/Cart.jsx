@@ -15,21 +15,27 @@ import { deleteFromCart } from "../../redux/cartSlice";
 const Cart = () => {
   const cart = useSelector((state) => state.cart);
   const dispatch = useDispatch();
-
+const totalPrice=cart.reduce((acc,cart)=>{
+  acc+= cart.price *cart.quantity;
+  return acc
+},0)
   return (
     <>
       <h1 style={{ paddingTop: "100px" }}> MarketEase Cart</h1>
-      <hr />
+      <hr sx={{ paddingTop: "40px" }} />
       <Container maxWidth="lg">
-        <TableContainer component={Paper}>
-          <Table sx={{ minWidth: 650 }} aria-label="simple table">
+        <TableContainer sx={{ marginTop: "40px" ,backgroundColor:"black",borderRadius:"10px"}} component={Paper}>
+          <Table
+            sx={{ minWidth: 650, paddingTop: "40px"}}
+            aria-label="simple table"
+          >
             <TableHead>
-              <TableRow sx={{ backgroundColor: "red" }}>
-                <TableCell align="left">PRODUCT</TableCell>
-                <TableCell align="left">PRICE</TableCell>
-                <TableCell align="left">QUINTATITY</TableCell>
-                <TableCell align="left">TOTAL</TableCell>
-                <TableCell align="left">ACTIONS</TableCell>
+              <TableRow>
+                <TableCell  sx={{color:"white"}} align="left">PRODUCT</TableCell>
+                <TableCell sx={{color:"white"}} align="left">PRICE</TableCell>
+                <TableCell sx={{color:"white"}} align="left">QUINTATITY</TableCell>
+                <TableCell sx={{color:"white"}} align="left">TOTAL</TableCell>
+                <TableCell sx={{color:"white"}} align="left">ACTIONS</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
@@ -38,29 +44,28 @@ const Cart = () => {
                   sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
                   key={cartitems.id}
                 >
-                  <TableCell align="left">{cartitems.id}</TableCell>
+                  <TableCell sx={{color:"white"}} align="left">{cartitems.title}</TableCell>
 
-                  <TableCell align="left">{cartitems.title}</TableCell>
-                  <TableCell align="left">{cartitems.price}</TableCell>
-                  <TableCell align="left">{cartitems.quantity}</TableCell>
-                  <TableCell align="left">
+                  <TableCell sx={{color:"white"}} align="left">{cartitems.price} $</TableCell>
+                  <TableCell  sx={{color:"white"}} align="left">
                     <div
                       style={{
                         display: "flex",
                         justifyContent: "center",
-                        alignItems:"center",
+                        alignItems: "center",
                         gap: "7px",
                         border: "1px solid gray",
-                        borderRadius:"10px",
+                        borderRadius: "10px",
                         padding: "9px",
                         maxWidth: "30%",
                       }}
                     >
                       <button style={{ padding: "5px" }}>-</button>
-                      <p>1</p>
+                      <p>{cartitems.quantity}</p>
                       <button style={{ padding: "5px" }}>+</button>
                     </div>
                   </TableCell>
+                  <TableCell sx={{color:"white"}} align="left">{totalPrice.toFixed(2)}</TableCell>
 
                   <TableCell
                     align="left"
@@ -88,7 +93,7 @@ const Cart = () => {
                       });
                     }}
                   >
-                    <DeleteForeverIcon sx={{ color: "red" }} />
+                    <DeleteForeverIcon sx={{ color: "red",paddingLeft:"20px"}} />
                   </TableCell>
                 </TableRow>
               ))}
